@@ -36,6 +36,7 @@ class Blog(models.Model):
     # Foreign Key used because Blog can only have one author/User, but bloggers can have multiple blog posts.
     description = models.TextField(max_length=2000, help_text="Enter Your Blog Text Here")
     post_date = models.DateField(default=date.today)
+    banner_image = models.ImageField(upload_to='blog-images/')
 
     class Meta:
         ordering = ['-post_date']
