@@ -52,3 +52,27 @@ class Blog(models.Model):
         """
         return self.name
 
+
+class BlogComment(models.Model):
+    """
+    Model representing a comment against a blog post.
+    """
+    description = models.TextField(max_length=1000, help_text="Enter Comment About blog here")
+    author = models.OneToOneField(User, on_delete=models.SET_NULL, null=True)
+    # Foreign Key used because BlogComment can only have one author/User, but users can have multiple comments
+    post_date = models.DateField(auto_now_add=True)
+    blog = models.OneToOneField(Blog, on_delete=models.CASCADE)
+
+    class Meta:
+        ordering = ['post_date']
+
+    def __str__(self):
+        """
+        String for representing the Model object.
+        """
+        len_title = 75
+        if len(self.description) > len_title:
+            titlestring = self.description[:len_title] + '...'
+        else:
+            titlestring = self.description
+        return titlestring
