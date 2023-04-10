@@ -12,7 +12,7 @@ class BlogAuthor(models.Model):
     """
     user = models.OneToOneField(User, on_delete=models.SET_NULL, null=True)
     bio = models.TextField(max_length=400, help_text="Enter Your Bio Details Here")
-    author_avatar = models.ImageField(upload_to='author-avatar')
+    author_avatar = models.ImageField(upload_to='author-avatar/')
 
     class Meta:
         ordering = ["user", "bio", "author_avatar"]
