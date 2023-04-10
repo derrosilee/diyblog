@@ -1,10 +1,70 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <title>Revolve - Personal Magazine blog Template</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="{% static 'blog/images/favicon.ico' %}" type="image/x-icon">
+
+    <!-- THEME CSS
+    ================================================== -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'blog/plugins/bootstrap/css/bootstrap.min.css' %}">
+    <!-- Themify -->
+    <link rel="stylesheet" href="{% static 'blog/plugins/themify/css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/plugins/slick-carousel/slick-theme.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/plugins/slick-carousel/slick.css' %}">
+    <!-- Slick Carousel -->
+    <link rel="stylesheet" href="{% static 'blog/plugins/owl-carousel/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/plugins/owl-carousel/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/plugins/magnific-popup/magnific-popup.css' %}">
+    <!-- manin stylesheet -->
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
 </head>
 <body>
+
+<div class="footer-home bg-grey py-4">
+    <div class="row">
+        <div class="col-lg-6 text-center text-lg-left">
+            © 2019 copyright Themes Themefisher Distribution <a href="https://themewagon.com">ThemeWagon.</a>
+        </div>
+        <div class="col-lg-6">
+            <ul class="list-inline text-center mb-0 text-lg-right">
+                <li class="list-inline-item"><a href="#">Privacy policy</a></li>
+                <li class="list-inline-item"><a href="#">Support</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Contact</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Category</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!-- THEME JAVASCRIPT FILES
+================================================== -->
+<!-- initialize jQuery Library -->
+<script src="{% static 'blog/plugins/jquery/jquery.js' %}"></script>
+<!-- Bootstrap jQuery -->
+<script src="{% static 'blog/plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'blog/plugins/bootstrap/js/popper.min.js' %}"></script>
+<!-- Owl caeousel -->
+<script src="{% static 'blog/plugins/owl-carousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'blog/plugins/slick-carousel/slick.min.js' %}"></script>
+<script src="{% static 'blog/plugins/magnific-popup/magnific-popup.js' %}"></script>
+<!-- Instagram Feed Js -->
+<script src="{% static 'blog/plugins/instafeed-js/instafeed.min.js' %}"></script>
+<!-- Google Map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC72vZw-6tGqFyRhhg5CkF2fqfILn2Tsw"></script>
+<script src="{% static 'blog/plugins/google-map/gmap.js' %}"></script>
+<!-- main js -->
+<script src="{% static 'blog/js/custom.js' %}"></script>
 
 </body>
 </html>
