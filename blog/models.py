@@ -31,7 +31,7 @@ class BlogAuthor(models.Model):
 
 
 class BlogCategory(models.Model):
-    name = models.CharField(max_length=40, null=True)
+    name = models.CharField(max_length=40, default='Category')
 
     def __str__(self):
         return self.name
