@@ -4,3 +4,5 @@ from .models import Blog, BlogAuthor
 
 
 admin.site.register(Blog)
+
+admin.site.register(BlogAuthor)
