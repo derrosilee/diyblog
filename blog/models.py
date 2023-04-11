@@ -37,6 +37,7 @@ class Blog(models.Model):
     description = models.TextField(max_length=2000, help_text="Enter Your Blog Text Here")
     post_date = models.DateField(default=date.today)
     banner_image = models.ImageField(upload_to='images/blog-images/')
+    blog_short_description = models.CharField(max_length=255, default="Enter A short Description")
 
     class Meta:
         ordering = ['-post_date']
