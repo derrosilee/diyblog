@@ -6,7 +6,7 @@
     <header class="header-top bg-grey justify-content-center py-2 d-lg-none">
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg navigation-2 navigation">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="{% url 'blogs' %}">
                     <img src="{% static 'blog/images/logo.png' %}" alt="" class="img-fluid">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse"
@@ -44,7 +44,7 @@
         <div class="sidebar d-none d-lg-block">
             <div class="sidebar-sticky">
                 <div class="logo-wrapper">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="{% url 'blogs' %}">
                         <img src="{% static 'blog/images/logo.png' %}" alt="" class="img-fluid">
                     </a>
                 </div>
@@ -53,7 +53,7 @@
                     <nav class="navbar navbar-expand-lg p-0">
                         <div class="navbar-collapse collapse" id="navbarsExample09" style="">
                             <ul class="list-unstyled ">
-                                <li class="nav-item dropdown">
+                                <li class="nav-item">
                                     <a class="nav-link" href="#">Home </a>
                                 </li>
                                 <li class="nav-item dropdown">
@@ -91,8 +91,8 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
 
                             <article class="post-grid mb-5 ">
-                                <a class="post-thumb mb-4 d-block" href="">
-                                    <img src="{{ blog.banner_image.url }}" alt="" class="img-fluid w-100">
+                                <a class="post-thumb mb-4 d-block" href="{{ blog.get_absolute_url }}">
+                                    <img src="{{ blog.banner_image.url }}" alt="Blog image" class="img-fluid w-100">
                                 </a>
 
                                 <div class="post-content-grid">
@@ -100,8 +100,9 @@
                                         <span class="day">{{ blog.post_date }}</span>
 {#                                        <span class="month text-uppercase">apr</span>#}
                                     </div>
-                                    <span class="cat-name text-color font-extra font-sm text-uppercase letter-spacing">{{ blog.name }}</span>
-                                    <h3 class="post-title mt-1"><a href="">{{ blog.author }}</a></h3>
+                                    <a href="{{ blog.get_absolute_url }}"><span class="cat-name text-color font-extra font-sm text-uppercase letter-spacing">{{ blog.name }}</span></a>
+                                    <h3 class="post-title mt-1">{{ blog.category }}</h3>
+                                    <p>{{ blog.blog_short_description }}</p>
                                     {#							<p>Lorem ipsum dolor sitamet consectetu ocilng elit. Donec eros aseb dui, suscipit ex uti commodo dignis#}
                                     {#								justo acas turpis egestas. Nullam et cursus</p>#}
                                 </div>
