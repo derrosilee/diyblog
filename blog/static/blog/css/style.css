@@ -1056,7 +1056,7 @@ overlay search
 }
 
 .label-date {
-  width: 64px;
+  /*width: 64px;*/
   border: 2px solid #eee;
   background-color: #fff;
   padding: 12px 5px;
