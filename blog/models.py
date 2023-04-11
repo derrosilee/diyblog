@@ -30,7 +30,17 @@ class BlogAuthor(models.Model):
         return self.user.username
 
 
+class BlogCategory(models.Model):
+    name = models.CharField(max_length=40, null=True)
+
+    def __str__(self):
+        return self.name
+
+    # TODO add Get Absolute Url
+
+
 class Blog(models.Model):
+    category = models.ForeignKey(BlogCategory, on_delete=models.SET_NULL, null=True)
     name = models.CharField(max_length=200)
     author = models.ForeignKey(BlogAuthor, on_delete=models.SET_NULL, null=True)
     # Foreign Key used because Blog can only have one author/User, but bloggers can have multiple blog posts.
