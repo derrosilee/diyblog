@@ -10,8 +10,9 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6 text-center">
-                    <a class="navbar-brand" href="{% url 'blogs' %}"><img src="{% static 'blog/images/logo.png' %}" alt=""
-                                                                   class="img-fluid w-100"></a>
+                    <a class="navbar-brand" href="{% url 'blogs' %}"><img src="{% static 'blog/images/logo.png' %}"
+                                                                          alt=""
+                                                                          class="img-fluid w-100"></a>
                 </div>
             </div>
         </div>
@@ -20,9 +21,10 @@
     <header class="header-top bg-grey justify-content-center">
         <nav class="navbar navbar-expand-lg navigation">
             <div class="container">
-                <a class="navbar-brand d-lg-none" href="{% url 'blogs' %}"><img src="{% static 'blog/images/logo.png' %}"
-                                                                         alt=""
-                                                                         class="img-fluid"></a>
+                <a class="navbar-brand d-lg-none" href="{% url 'blogs' %}"><img
+                        src="{% static 'blog/images/logo.png' %}"
+                        alt=""
+                        class="img-fluid"></a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
                         aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +33,8 @@
                 <div class="collapse navbar-collapse" id="navbarContent">
                     <ul id="menu" class="menu navbar-nav ">
                         <li class="nav-item dropdown  pl-0">
-                            <a class="nav-link " href="{% url 'blogs' %}" role="button" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link " href="{% url 'blogs' %}" role="button" aria-haspopup="true"
+                               aria-expanded="false">
                                 Home
                             </a>
 
@@ -137,9 +140,10 @@
                         </div>
 
                         <div class="author-content pl-4">
-                            <h4 class="mb-3"><a href="#" title="" rel="author" class="text-capitalize">{{ blog.author }}</a>
+                            <h4 class="mb-3"><a href="#" title="" rel="author"
+                                                class="text-capitalize">{{ blog.author }}</a>
                             </h4>
-                            <p>{{ blog.author.bio}}</p>
+                            <p>{{ blog.author.bio }}</p>
 
                             <a target="_blank" class="author-social" href="#"><i class="ti-facebook"></i></a>
                             <a target="_blank" class="author-social" href="#"><i class="ti-twitter"></i></a>
@@ -222,10 +226,10 @@
                                 <div class="about-author">
                                     <img src="{% static 'blog/images/author.jpg' %}" alt="" class="img-fluid">
                                 </div>
-                                <h4 class="mb-0 mt-4">{{ blog.author}}</h4>
+                                <h4 class="mb-0 mt-4">{{ blog.author }}</h4>
                                 <p>Travel Blogger</p>
-                                <p>{{ blog.author.bio}}</p>
-                                <img src="{{blog.author.author_avatar}}" alt="" class="img-fluid">
+                                <p>{{ blog.author.bio }}</p>
+                                <img src="{{ blog.author.author_avatar }}" alt="" class="img-fluid">
                             </div>
 
                             <div class="sidebar-widget follow mb-5 text-center">
