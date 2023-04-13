@@ -23,7 +23,7 @@ class BlogDetailView(generic.DetailView):
     template_name = 'blog/blog-detail.html'
 
 
-class AutorListView(generic.ListView):
+class BlogAuthorListView(generic.ListView):
     """
     Generic Class Based View for a list view of all Authors
     """
