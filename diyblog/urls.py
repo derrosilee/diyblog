@@ -8,11 +8,11 @@ urlpatterns = [
 ]
 
 urlpatterns += [
-    path('blog/', include('blog.urls'))
+    path('blog/', include('blog.urls')),
+    path('', include('users.urls'))
 ]
 
 # Add Django site authentication urls (for login, logout, password management)
-
 
 
 if settings.DEBUG:  # new
