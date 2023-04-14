@@ -56,3 +56,7 @@ class BlogListByAuthorView(generic.ListView):
         # Get the blogger object from the "pk" URL parameter and add it to the context
         context['blogger'] = get_object_or_404(BlogAuthor, pk=self.kwargs['pk'])
         return context
+
+
+def register(request):
+    return render(request, 'registration/register.html')
