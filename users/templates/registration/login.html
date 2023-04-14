@@ -1,4 +1,5 @@
 {% extends 'registration/base.html' %}
+{% load widget_tweaks %}
 {% block body %}
     <body>
 {% load static %}
@@ -28,13 +29,12 @@
                                 {% endif %}
                                 <div class="form-group first">
                                     <label for="username">Username</label>
-                                    <input type="text" class="form-control" placeholder="your-email@gmail.com"
-                                           id="username">
+                                    {% render_field form.username class="form-control" placeholder="username" %}
+
                                 </div>
                                 <div class="form-group last mb-3">
                                     <label for="password">Password</label>
-                                    <input type="password" class="form-control" placeholder="Your Password"
-                                           id="password">
+                                    {% render_field form.password class="form-control" placeholder="Password" %}
                                 </div>
 
                                 <div class="d-sm-flex mb-5 align-items-center">
@@ -42,11 +42,11 @@
                                         <input type="checkbox" checked="checked"/>
                                         <div class="control__indicator"></div>
                                     </label>
-                                    <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span>
+                                    <span class="ml-auto"><a href="" class="forgot-pass">Forgot Password</a></span>
                                 </div>
 
                                 <input type="submit" value="Log In" class="btn btn-block py-2 btn-primary">
-
+                                <input type="hidden" name="next" value="{{ next }}">
 
                                 <div class="d-sm-flex mb-5 align-items-center">
                                     <h5>Dont have an acc?</h5>
