@@ -14,6 +14,12 @@ urlpatterns += [
 
 # Add Django site authentication urls (for login, logout, password management)
 
+urlpatterns += [
+    path('accounts/', include('django.contrib.auth.urls')),
+]
+
+# Add Django site authentication urls (for login, logout, password management)
+
 
 if settings.DEBUG:  # new
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
