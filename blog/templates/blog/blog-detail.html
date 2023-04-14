@@ -140,9 +140,8 @@
                         </div>
 
                         <div class="author-content pl-4">
-                            <h4 class="mb-3"><a href="#" title="" rel="author"
-                                                class="text-capitalize">{{ blog.author }}</a>
-                            </h4>
+                            <a href="{{ blog.author.get_absolute_url }}" title="" rel="author"
+                                                class="text-capitalize"><h4 class="mb-3">{{ blog.author }}</h4></a>
                             <p>{{ blog.author.bio }}</p>
 
                             <a target="_blank" class="author-social" href="#"><i class="ti-facebook"></i></a>
