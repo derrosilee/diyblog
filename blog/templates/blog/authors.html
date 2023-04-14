@@ -107,7 +107,7 @@
                                         <div class="about-author">
                                             <img src="{{author.author_avatar.url}}" alt="" class="img-fluid">
                                         </div>
-                                        <a href=""><h4 class="mb-0 mt-4">{{ author.user }}</h4></a>
+                                        <a href="{{ author.get_absolute_url }}"><h4 class="mb-0 mt-4">{{ author.user }}</h4></a>
 {#                                        <p>Travel Blogger</p>#}
                                         <img src="{{ author.author.author_avatar }}" alt="" class="img-fluid">
                                     </div>
