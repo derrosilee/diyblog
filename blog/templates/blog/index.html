@@ -62,12 +62,12 @@
 
                                 {% if user.is_authenticated %}
                                     <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'logout' %}">Logout</a>
-                                </li>
-                                    {% else %}
+                                        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                                    </li>
+                                {% else %}
                                     <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'login' %}">Login</a>
-                                </li>
+                                        <a class="nav-link" href="{% url 'login' %}">Login</a>
+                                    </li>
                                 {% endif %}
 
                                 <li class="nav-item">
@@ -108,9 +108,10 @@
                                 <div class="post-content-grid">
                                     <div class="label-date">
                                         <span class="day">{{ blog.post_date }}</span>
-{#                                        <span class="month text-uppercase">apr</span>#}
+                                        {#                                        <span class="month text-uppercase">apr</span>#}
                                     </div>
-                                    <a href="{{ blog.get_absolute_url }}"><span class="cat-name text-color font-extra font-sm text-uppercase letter-spacing">{{ blog.name }}</span></a>
+                                    <a href="{{ blog.get_absolute_url }}"><span
+                                            class="cat-name text-color font-extra font-sm text-uppercase letter-spacing">{{ blog.name }}</span></a>
                                     <h3 class="post-title mt-1">{{ blog.category }}</h3>
                                     <p>{{ blog.blog_short_description }}</p>
                                     {#							<p>Lorem ipsum dolor sitamet consectetu ocilng elit. Donec eros aseb dui, suscipit ex uti commodo dignis#}
