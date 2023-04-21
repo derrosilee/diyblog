@@ -1,8 +1,9 @@
-
+{% include 'registration/base.html' %}
   
-
+{% block body %}
+    {% load static %}
   <div class="d-md-flex half">
-    <div class="bg" style="background-image: url('images/bg_1.jpg');"></div>
+    <div class="bg" style="background-image: url({% static 'registration/images/bg_1.jpg' %});"></div>
     <div class="contents">
 
       <div class="container">
@@ -56,4 +57,4 @@
     
 
   </body>
-</html>
+{% endblock body %}
