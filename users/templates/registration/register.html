@@ -2,6 +2,7 @@
   
 {% block body %}
     {% load static %}
+    {% load widget_tweaks %}
   <div class="d-md-flex half">
     <div class="bg" style="background-image: url({% static 'registration/images/bg_1.jpg' %});"></div>
     <div class="contents">
@@ -37,7 +38,7 @@
 
                 <div class="d-sm-flex mb-5 align-items-center">
                   <h5>Already a Member?</h5>
-                  <span><a href="login.html">Login</a></span>
+                  <span><a href="{% url 'login' %}">Login</a></span>
                 </div>
 
 
