@@ -12,6 +12,10 @@ urlpatterns += [
     path('', include('users.urls'))
 ]
 
+urlpatterns +=[
+    path('', include("users.urls"))
+]
+
 # Add Django site authentication urls (for login, logout, password management)
 
 urlpatterns += [
