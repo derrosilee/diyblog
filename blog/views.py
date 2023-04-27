@@ -15,7 +15,7 @@ class BlogListView(generic.ListView):
     """
     model = Blog
     template_name = 'blog/index.html'
-    # TODO: Add Pagination by 6 articles
+    paginate_by = 6
 
 
 class BlogDetailView(generic.DetailView):
