@@ -129,10 +129,16 @@
 
             <div class="pagination pt-4 mb-5 justify-content-center">
                 <ul class="list-inline">
-                    <li class="list-inline-item"><a href="#" class="active">1</a></li>
-                    <li class="list-inline-item"><a href="#">2</a></li>
-                    <li class="list-inline-item"><a href="#">3</a></li>
-                    <li class="list-inline-item"><a href="#" class="prev-posts"><i class="ti-arrow-right"></i></a></li>
+                    {% if page_obj.has_previous %}
+                        <li class="list-inline-item"><a
+                                href="{{ request.path }}?page={{ page_obj.previous_page_number }}">previous</a></li>
+                    {% endif %}
+                    <li class="list-inline-item"><a href="#" class="active">{{ page_obj.number }} </a></li>
+
+                    {% if page_obj.has_next %}
+                        <li class="list-inline-item"><a href="{{ request.path }}?page={{ page_obj.next_page_number }}">next</a>
+                        </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
@@ -143,3 +149,5 @@
     </body>
 
 {% endblock body %}
+
+
