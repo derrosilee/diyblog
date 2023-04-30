@@ -38,7 +38,7 @@ class BlogListByAuthorView(generic.ListView):
     Generic class-based view for a list of blogs posted by a particular BlogAuthor.
     """
     model = Blog
-    # TODO: Add Pagination
+
     template_name = 'blog/blog_list_by_author.html'
 
     def get_queryset(self):
