@@ -8,7 +8,6 @@ from django.urls import reverse
 
 
 # Create your views here.
-# TODO:: Change to class list view for all the blogs
 class BlogListView(generic.ListView):
     """
     Generic class-based view for a list of all blogs.
