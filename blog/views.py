@@ -61,6 +61,7 @@ class BlogListByAuthorView(generic.ListView):
 
 
 class BlogCommentCreate(LoginRequiredMixin, CreateView):
+    # TODO: Check why comment system is not working
     """
     Form for adding a blog comment. Requires login.
     """
