@@ -12,7 +12,7 @@ urlpatterns += [
     path('', include('users.urls'))
 ]
 
-urlpatterns +=[
+urlpatterns += [
     path('', include("users.urls"))
 ]
 
