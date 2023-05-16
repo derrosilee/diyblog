@@ -6,7 +6,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.edit import CreateView
 from django.urls import reverse
 
-
 # Create your views here.
 class BlogListView(generic.ListView):
     """
